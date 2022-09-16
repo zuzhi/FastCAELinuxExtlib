@@ -1,0 +1,13 @@
+prefix=/home/chan/temp/FastCAELinuxExtlibSource/zlib-1.2.12/install
+exec_prefix=/home/chan/temp/FastCAELinuxExtlibSource/zlib-1.2.12/install
+libdir=lib
+sharedlibdir=lib
+includedir=include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.12
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
