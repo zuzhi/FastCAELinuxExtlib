@@ -81,12 +81,12 @@ MAKESETUP=      $(srcdir)/Modules/makesetup
 OPT=		-DNDEBUG -g -fwrapv -O3 -Wall
 BASECFLAGS=	 -Wno-unused-result -Wsign-compare
 BASECPPFLAGS=	
-CONFIGURE_CFLAGS=	-fPIC -Wl,-rpath,$ORIGIN:$ORIGIN/../lib
+CONFIGURE_CFLAGS=	-fPIC '-Wl,-rpath,$$ORIGIN:$$ORIGIN/../lib'
 # CFLAGS_NODIST is used for building the interpreter and stdlib C extensions.
 # Use it when a compiler flag should _not_ be part of the distutils CFLAGS
 # once Python is installed (Issue #21121).
 CONFIGURE_CFLAGS_NODIST= -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -Wno-cast-function-type -Werror=implicit-function-declaration
-CONFIGURE_CPPFLAGS=	
+CONFIGURE_CPPFLAGS=	-fPIC '-Wl,-rpath,$$ORIGIN:$$ORIGIN/../lib'
 CONFIGURE_LDFLAGS=	
 # Avoid assigning CFLAGS, LDFLAGS, etc. so users can use them on the
 # command line to append to these values without stomping the pre-set

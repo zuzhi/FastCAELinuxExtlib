@@ -19,18 +19,18 @@ build_time_vars = {'ABIFLAGS': 'm',
  'CC': 'gcc -pthread',
  'CCSHARED': '-fPIC',
  'CFLAGS': '-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall '
-           '-fPIC -Wl,-rpath,$ORIGIN:$ORIGIN/../lib',
+           "-fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib'",
  'CFLAGSFORSHARED': '-fPIC',
  'CFLAGS_ALIASING': '',
  'CONFIGFILES': 'configure configure.ac acconfig.h pyconfig.h.in '
                 'Makefile.pre.in',
- 'CONFIGURE_CFLAGS': '-fPIC -Wl,-rpath,$ORIGIN:$ORIGIN/../lib',
+ 'CONFIGURE_CFLAGS': "-fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib'",
  'CONFIGURE_CFLAGS_NODIST': '-std=c99 -Wextra -Wno-unused-result '
                             '-Wno-unused-parameter '
                             '-Wno-missing-field-initializers '
                             '-Wno-cast-function-type '
                             '-Werror=implicit-function-declaration',
- 'CONFIGURE_CPPFLAGS': '',
+ 'CONFIGURE_CPPFLAGS': "-fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib'",
  'CONFIGURE_LDFLAGS': '',
  'CONFIG_ARGS': "'--enable-optimizations' "
                 "'--prefix=/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install' "
@@ -43,7 +43,7 @@ build_time_vars = {'ABIFLAGS': 'm',
  'COVERAGE_REPORT': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/lcov-report',
  'COVERAGE_REPORT_OPTIONS': '--no-branch-coverage --title "CPython lcov '
                             'report"',
- 'CPPFLAGS': '-I. -I./Include',
+ 'CPPFLAGS': "-I. -I./Include -fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib'",
  'CXX': 'g++ -pthread',
  'DESTDIRS': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install '
              '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/lib '
@@ -601,7 +601,7 @@ build_time_vars = {'ABIFLAGS': 'm',
  'PYTHON_HEADERS': '\\',
  'PYTHON_OBJS': '\\',
  'PY_CFLAGS': '-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall '
-              '-fPIC -Wl,-rpath,$ORIGIN:$ORIGIN/../lib',
+              "-fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib'",
  'PY_CFLAGS_NODIST': '-std=c99 -Wextra -Wno-unused-result '
                      '-Wno-unused-parameter -Wno-missing-field-initializers '
                      '-Wno-cast-function-type '
@@ -609,23 +609,25 @@ build_time_vars = {'ABIFLAGS': 'm',
                      '-fprofile-correction',
  'PY_COERCE_C_LOCALE': 1,
  'PY_CORE_CFLAGS': '-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 '
-                   '-Wall -fPIC -Wl,-rpath,$ORIGIN:$ORIGIN/../lib -std=c99 '
+                   "-Wall -fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib' -std=c99 "
                    '-Wextra -Wno-unused-result -Wno-unused-parameter '
                    '-Wno-missing-field-initializers -Wno-cast-function-type '
                    '-Werror=implicit-function-declaration -fprofile-use '
-                   '-fprofile-correction -I. -I./Include -fPIC -DPy_BUILD_CORE',
- 'PY_CPPFLAGS': '-I. -I./Include',
+                   '-fprofile-correction -I. -I./Include -fPIC '
+                   "'-Wl,-rpath,$ORIGIN:$ORIGIN/../lib' -fPIC -DPy_BUILD_CORE",
+ 'PY_CPPFLAGS': "-I. -I./Include -fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib'",
  'PY_FORMAT_SIZE_T': '"z"',
  'PY_LDFLAGS': '',
  'PY_SSL_DEFAULT_CIPHERS': 1,
  'PY_SSL_DEFAULT_CIPHER_STRING': 0,
  'PY_STDMODULE_CFLAGS': '-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv '
-                        '-O3 -Wall -fPIC -Wl,-rpath,$ORIGIN:$ORIGIN/../lib '
+                        "-O3 -Wall -fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib' "
                         '-std=c99 -Wextra -Wno-unused-result '
                         '-Wno-unused-parameter -Wno-missing-field-initializers '
                         '-Wno-cast-function-type '
                         '-Werror=implicit-function-declaration -fprofile-use '
-                        '-fprofile-correction -I. -I./Include -fPIC',
+                        '-fprofile-correction -I. -I./Include -fPIC '
+                        "'-Wl,-rpath,$ORIGIN:$ORIGIN/../lib' -fPIC",
  'PY_WARN_ON_C_LOCALE': 1,
  'Py_DEBUG': 0,
  'Py_ENABLE_SHARED': 1,
