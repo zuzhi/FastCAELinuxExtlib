@@ -1,4 +1,4 @@
-#!/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/bin/python3.7m
+#!/home/chan/Downloads/Python-3.7.0/install/bin/python3.7m
 # -*- python -*-
 
 # Keep this script in sync with python-config.sh.in

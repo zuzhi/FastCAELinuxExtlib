@@ -28,10 +28,10 @@ MODLIBS=           $(LOCALMODLIBS) $(BASEMODLIBS)
 
 # === Variables set by configure
 VERSION=	3.7
-srcdir=		.
-
-abs_srcdir=	/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0
-abs_builddir=	/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0
+srcdir=		..
+VPATH=		..
+abs_srcdir=	/home/chan/Downloads/Python-3.7.0/build/..
+abs_builddir=	/home/chan/Downloads/Python-3.7.0/build
 
 
 CC=		gcc -pthread
@@ -80,14 +80,14 @@ MAKESETUP=      $(srcdir)/Modules/makesetup
 # Compiler options
 OPT=		-DNDEBUG -g -fwrapv -O3 -Wall
 BASECFLAGS=	 -Wno-unused-result -Wsign-compare
-BASECPPFLAGS=	
-CONFIGURE_CFLAGS=	-fPIC '-Wl,-rpath,$$ORIGIN:$$ORIGIN/../lib'
+BASECPPFLAGS=	-IObjects -IInclude -IPython
+CONFIGURE_CFLAGS=	-fPIC -Wl,-rpath,$ORIGIN:$ORIGIN/../lib
 # CFLAGS_NODIST is used for building the interpreter and stdlib C extensions.
 # Use it when a compiler flag should _not_ be part of the distutils CFLAGS
 # once Python is installed (Issue #21121).
-CONFIGURE_CFLAGS_NODIST= -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -Wno-cast-function-type -Werror=implicit-function-declaration
-CONFIGURE_CPPFLAGS=	-fPIC '-Wl,-rpath,$$ORIGIN:$$ORIGIN/../lib'
-CONFIGURE_LDFLAGS=	
+CONFIGURE_CFLAGS_NODIST= -std=c99 -Wextra -Wno-unused-result -Wno-unused-parameter -Wno-missing-field-initializers -Werror=implicit-function-declaration
+CONFIGURE_CPPFLAGS=	-I/home/chan/Downloads/libffi-3.4.2/install/include/
+CONFIGURE_LDFLAGS=	-L/home/chan/Downloads/libffi-3.4.2/install/lib64/
 # Avoid assigning CFLAGS, LDFLAGS, etc. so users can use them on the
 # command line to append to these values without stomping the pre-set
 # values.
@@ -121,7 +121,7 @@ MULTIARCH=	x86_64-linux-gnu
 MULTIARCH_CPPFLAGS = -DMULTIARCH=\"x86_64-linux-gnu\"
 
 # Install prefix for architecture-independent files
-prefix=		/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install
+prefix=		/home/chan/Downloads/Python-3.7.0/install
 
 # Install prefix for architecture-dependent files
 exec_prefix=	${prefix}
@@ -178,15 +178,15 @@ LIPO_32BIT_FLAGS=
 OTHER_LIBTOOL_OPT=
 
 # Environment to run shared python without installed libraries
-RUNSHARED=       LD_LIBRARY_PATH=/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0
+RUNSHARED=       LD_LIBRARY_PATH=/home/chan/Downloads/Python-3.7.0/build:/opt/gcc-7.5.0/lib:/opt/gcc-7.5.0/lib64
 
 # ensurepip options
 ENSUREPIP=      upgrade
 
 # OpenSSL options for setup.py so sysconfig can pick up AC_SUBST() vars.
-OPENSSL_INCLUDES=
-OPENSSL_LIBS=
-OPENSSL_LDFLAGS=
+OPENSSL_INCLUDES=-I/usr/local/include
+OPENSSL_LIBS=-lssl -lcrypto
+OPENSSL_LDFLAGS=-L/usr/local/lib
 
 # Modes for directories, executables and data files created by the
 # install process.  Default to user-only-writable for all file types.
@@ -195,7 +195,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 '--enable-optimizations' '--prefix=/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install' '--enable-shared' 'CFLAGS=-fPIC -Wl,-rpath,$ORIGIN:$ORIGIN/../lib'
+CONFIG_ARGS=	 '--prefix=/home/chan/Downloads/Python-3.7.0/install' '--enable-optimizations' '--enable-shared' '--with-system-ffi' 'CFLAGS=-fPIC -Wl,-rpath,$ORIGIN:$ORIGIN/../lib' 'CXXFLAGS=-fPIC -Wl,-rpath,$ORIGIN:$ORIGIN/../lib' 'LDFLAGS=-L/home/chan/Downloads/libffi-3.4.2/install/lib64/' 'CPPFLAGS=-I/home/chan/Downloads/libffi-3.4.2/install/include/'
 
 
 # Subdirectories with code

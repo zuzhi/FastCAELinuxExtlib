@@ -1,5 +1,5 @@
 # See: man pkg-config
-prefix=/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install
+prefix=/home/chan/Downloads/Python-3.7.0/install
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

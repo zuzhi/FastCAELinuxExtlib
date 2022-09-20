@@ -6,12 +6,13 @@ build_time_vars = {'ABIFLAGS': 'm',
  'AR': 'ar',
  'ARFLAGS': 'rcs',
  'BASECFLAGS': '-Wno-unused-result -Wsign-compare',
- 'BASECPPFLAGS': '',
+ 'BASECPPFLAGS': '-IObjects -IInclude -IPython',
  'BASEMODLIBS': '',
- 'BINDIR': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/bin',
- 'BINLIBDEST': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/lib/python3.7',
+ 'BINDIR': '/home/chan/Downloads/Python-3.7.0/install/bin',
+ 'BINLIBDEST': '/home/chan/Downloads/Python-3.7.0/install/lib/python3.7',
  'BLDLIBRARY': '-L. -lpython3.7m',
- 'BLDSHARED': 'gcc -pthread -shared',
+ 'BLDSHARED': 'gcc -pthread -shared '
+              '-L/home/chan/Downloads/libffi-3.4.2/install/lib64/',
  'BUILDEXE': '',
  'BUILDPYTHON': 'python',
  'BUILD_GNU_TYPE': 'x86_64-pc-linux-gnu',
@@ -19,39 +20,42 @@ build_time_vars = {'ABIFLAGS': 'm',
  'CC': 'gcc -pthread',
  'CCSHARED': '-fPIC',
  'CFLAGS': '-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall '
-           "-fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib'",
+           '-fPIC -Wl,-rpath,$ORIGIN:$ORIGIN/../lib',
  'CFLAGSFORSHARED': '-fPIC',
  'CFLAGS_ALIASING': '',
  'CONFIGFILES': 'configure configure.ac acconfig.h pyconfig.h.in '
                 'Makefile.pre.in',
- 'CONFIGURE_CFLAGS': "-fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib'",
+ 'CONFIGURE_CFLAGS': '-fPIC -Wl,-rpath,$ORIGIN:$ORIGIN/../lib',
  'CONFIGURE_CFLAGS_NODIST': '-std=c99 -Wextra -Wno-unused-result '
                             '-Wno-unused-parameter '
                             '-Wno-missing-field-initializers '
-                            '-Wno-cast-function-type '
                             '-Werror=implicit-function-declaration',
- 'CONFIGURE_CPPFLAGS': "-fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib'",
- 'CONFIGURE_LDFLAGS': '',
- 'CONFIG_ARGS': "'--enable-optimizations' "
-                "'--prefix=/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install' "
-                "'--enable-shared' 'CFLAGS=-fPIC "
-                "-Wl,-rpath,$ORIGIN:$ORIGIN/../lib'",
- 'CONFINCLUDEDIR': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/include',
- 'CONFINCLUDEPY': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/include/python3.7m',
+ 'CONFIGURE_CPPFLAGS': '-I/home/chan/Downloads/libffi-3.4.2/install/include/',
+ 'CONFIGURE_LDFLAGS': '-L/home/chan/Downloads/libffi-3.4.2/install/lib64/',
+ 'CONFIG_ARGS': "'--prefix=/home/chan/Downloads/Python-3.7.0/install' "
+                "'--enable-optimizations' '--enable-shared' "
+                "'--with-system-ffi' 'CFLAGS=-fPIC "
+                "-Wl,-rpath,$ORIGIN:$ORIGIN/../lib' 'CXXFLAGS=-fPIC "
+                "-Wl,-rpath,$ORIGIN:$ORIGIN/../lib' "
+                "'LDFLAGS=-L/home/chan/Downloads/libffi-3.4.2/install/lib64/' "
+                "'CPPFLAGS=-I/home/chan/Downloads/libffi-3.4.2/install/include/'",
+ 'CONFINCLUDEDIR': '/home/chan/Downloads/Python-3.7.0/install/include',
+ 'CONFINCLUDEPY': '/home/chan/Downloads/Python-3.7.0/install/include/python3.7m',
  'COREPYTHONPATH': '',
- 'COVERAGE_INFO': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/coverage.info',
- 'COVERAGE_REPORT': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/lcov-report',
+ 'COVERAGE_INFO': '/home/chan/Downloads/Python-3.7.0/build/coverage.info',
+ 'COVERAGE_REPORT': '/home/chan/Downloads/Python-3.7.0/build/lcov-report',
  'COVERAGE_REPORT_OPTIONS': '--no-branch-coverage --title "CPython lcov '
                             'report"',
- 'CPPFLAGS': "-I. -I./Include -fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib'",
+ 'CPPFLAGS': '-IObjects -IInclude -IPython -I. -I../Include '
+             '-I/home/chan/Downloads/libffi-3.4.2/install/include/',
  'CXX': 'g++ -pthread',
- 'DESTDIRS': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install '
-             '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/lib '
-             '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/lib/python3.7 '
-             '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/lib/python3.7/lib-dynload',
- 'DESTLIB': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/lib/python3.7',
+ 'DESTDIRS': '/home/chan/Downloads/Python-3.7.0/install '
+             '/home/chan/Downloads/Python-3.7.0/install/lib '
+             '/home/chan/Downloads/Python-3.7.0/install/lib/python3.7 '
+             '/home/chan/Downloads/Python-3.7.0/install/lib/python3.7/lib-dynload',
+ 'DESTLIB': '/home/chan/Downloads/Python-3.7.0/install/lib/python3.7',
  'DESTPATH': '',
- 'DESTSHARED': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/lib/python3.7/lib-dynload',
+ 'DESTSHARED': '/home/chan/Downloads/Python-3.7.0/install/lib/python3.7/lib-dynload',
  'DFLAGS': '',
  'DIRMODE': 755,
  'DIST': 'README.rst ChangeLog configure configure.ac acconfig.h pyconfig.h.in '
@@ -481,16 +485,16 @@ build_time_vars = {'ABIFLAGS': 'm',
  'HAVE_WMEMCMP': 1,
  'HAVE_WORKING_TZSET': 1,
  'HAVE_WRITEV': 1,
- 'HAVE_X509_VERIFY_PARAM_SET1_HOST': 0,
+ 'HAVE_X509_VERIFY_PARAM_SET1_HOST': 1,
  'HAVE_ZLIB_COPY': 1,
  'HAVE__GETPTY': 0,
  'HOST_GNU_TYPE': 'x86_64-pc-linux-gnu',
- 'INCLDIRSTOMAKE': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/include '
-                   '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/include '
-                   '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/include/python3.7m '
-                   '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/include/python3.7m',
- 'INCLUDEDIR': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/include',
- 'INCLUDEPY': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/include/python3.7m',
+ 'INCLDIRSTOMAKE': '/home/chan/Downloads/Python-3.7.0/install/include '
+                   '/home/chan/Downloads/Python-3.7.0/install/include '
+                   '/home/chan/Downloads/Python-3.7.0/install/include/python3.7m '
+                   '/home/chan/Downloads/Python-3.7.0/install/include/python3.7m',
+ 'INCLUDEDIR': '/home/chan/Downloads/Python-3.7.0/install/include',
+ 'INCLUDEPY': '/home/chan/Downloads/Python-3.7.0/install/include/python3.7m',
  'INSTALL': '/usr/bin/install -c',
  'INSTALL_DATA': '/usr/bin/install -c -m 644',
  'INSTALL_PROGRAM': '/usr/bin/install -c',
@@ -500,21 +504,22 @@ build_time_vars = {'ABIFLAGS': 'm',
  'IO_H': 'Modules/_io/_iomodule.h',
  'IO_OBJS': '\\',
  'LDCXXSHARED': 'g++ -pthread -shared',
- 'LDFLAGS': '',
+ 'LDFLAGS': '-L/home/chan/Downloads/libffi-3.4.2/install/lib64/',
  'LDLAST': '',
  'LDLIBRARY': 'libpython3.7m.so',
  'LDLIBRARYDIR': '',
- 'LDSHARED': 'gcc -pthread -shared',
+ 'LDSHARED': 'gcc -pthread -shared '
+             '-L/home/chan/Downloads/libffi-3.4.2/install/lib64/',
  'LDVERSION': '3.7m',
  'LIBC': '',
- 'LIBDEST': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/lib/python3.7',
- 'LIBDIR': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/lib',
+ 'LIBDEST': '/home/chan/Downloads/Python-3.7.0/install/lib/python3.7',
+ 'LIBDIR': '/home/chan/Downloads/Python-3.7.0/install/lib',
  'LIBFFI_INCLUDEDIR': '',
  'LIBM': '-lm',
  'LIBOBJDIR': 'Python/',
  'LIBOBJS': '',
- 'LIBPC': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/lib/pkgconfig',
- 'LIBPL': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/lib/python3.7/config-3.7m-x86_64-linux-gnu',
+ 'LIBPC': '/home/chan/Downloads/Python-3.7.0/install/lib/pkgconfig',
+ 'LIBPL': '/home/chan/Downloads/Python-3.7.0/install/lib/python3.7/config-3.7m-x86_64-linux-gnu',
  'LIBRARY': 'libpython3.7m.a',
  'LIBRARY_OBJS': '\\',
  'LIBRARY_OBJS_OMIT_FROZEN': '\\',
@@ -531,13 +536,13 @@ build_time_vars = {'ABIFLAGS': 'm',
  'LOG1P_DROPS_ZERO_SIGN': 0,
  'MACHDEP': 'linux',
  'MACHDEP_OBJS': '',
- 'MACHDESTLIB': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/lib/python3.7',
+ 'MACHDESTLIB': '/home/chan/Downloads/Python-3.7.0/install/lib/python3.7',
  'MACOSX_DEPLOYMENT_TARGET': '',
  'MAINCC': 'gcc -pthread',
  'MAJOR_IN_MKDEV': 0,
  'MAJOR_IN_SYSMACROS': 0,
- 'MAKESETUP': './Modules/makesetup',
- 'MANDIR': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/share/man',
+ 'MAKESETUP': '../Modules/makesetup',
+ 'MANDIR': '/home/chan/Downloads/Python-3.7.0/install/share/man',
  'MKDIR_P': '/usr/bin/mkdir -p',
  'MODBUILT_NAMES': 'posix  errno  pwd  _sre  _codecs  _weakref  _functools  '
                    '_operator  _collections  _abc  itertools  atexit  _signal  '
@@ -564,9 +569,9 @@ build_time_vars = {'ABIFLAGS': 'm',
  'MVWDELCH_IS_EXPRESSION': 0,
  'NO_AS_NEEDED': '-Wl,--no-as-needed',
  'OBJECT_OBJS': '\\',
- 'OPENSSL_INCLUDES': '',
- 'OPENSSL_LDFLAGS': '',
- 'OPENSSL_LIBS': '',
+ 'OPENSSL_INCLUDES': '-I/usr/local/include',
+ 'OPENSSL_LDFLAGS': '-L/usr/local/lib',
+ 'OPENSSL_LIBS': '-lssl -lcrypto',
  'OPT': '-DNDEBUG -g -fwrapv -O3 -Wall',
  'OTHER_LIBTOOL_OPT': '',
  'PACKAGE_BUGREPORT': 0,
@@ -601,33 +606,36 @@ build_time_vars = {'ABIFLAGS': 'm',
  'PYTHON_HEADERS': '\\',
  'PYTHON_OBJS': '\\',
  'PY_CFLAGS': '-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall '
-              "-fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib'",
+              '-fPIC -Wl,-rpath,$ORIGIN:$ORIGIN/../lib',
  'PY_CFLAGS_NODIST': '-std=c99 -Wextra -Wno-unused-result '
                      '-Wno-unused-parameter -Wno-missing-field-initializers '
-                     '-Wno-cast-function-type '
                      '-Werror=implicit-function-declaration -fprofile-use '
                      '-fprofile-correction',
  'PY_COERCE_C_LOCALE': 1,
  'PY_CORE_CFLAGS': '-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv -O3 '
-                   "-Wall -fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib' -std=c99 "
+                   '-Wall -fPIC -Wl,-rpath,$ORIGIN:$ORIGIN/../lib -std=c99 '
                    '-Wextra -Wno-unused-result -Wno-unused-parameter '
-                   '-Wno-missing-field-initializers -Wno-cast-function-type '
+                   '-Wno-missing-field-initializers '
                    '-Werror=implicit-function-declaration -fprofile-use '
-                   '-fprofile-correction -I. -I./Include -fPIC '
-                   "'-Wl,-rpath,$ORIGIN:$ORIGIN/../lib' -fPIC -DPy_BUILD_CORE",
- 'PY_CPPFLAGS': "-I. -I./Include -fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib'",
+                   '-fprofile-correction -IObjects -IInclude -IPython -I. '
+                   '-I../Include '
+                   '-I/home/chan/Downloads/libffi-3.4.2/install/include/ -fPIC '
+                   '-DPy_BUILD_CORE',
+ 'PY_CPPFLAGS': '-IObjects -IInclude -IPython -I. -I../Include '
+                '-I/home/chan/Downloads/libffi-3.4.2/install/include/',
  'PY_FORMAT_SIZE_T': '"z"',
- 'PY_LDFLAGS': '',
+ 'PY_LDFLAGS': '-L/home/chan/Downloads/libffi-3.4.2/install/lib64/',
  'PY_SSL_DEFAULT_CIPHERS': 1,
  'PY_SSL_DEFAULT_CIPHER_STRING': 0,
  'PY_STDMODULE_CFLAGS': '-Wno-unused-result -Wsign-compare -DNDEBUG -g -fwrapv '
-                        "-O3 -Wall -fPIC '-Wl,-rpath,$ORIGIN:$ORIGIN/../lib' "
+                        '-O3 -Wall -fPIC -Wl,-rpath,$ORIGIN:$ORIGIN/../lib '
                         '-std=c99 -Wextra -Wno-unused-result '
                         '-Wno-unused-parameter -Wno-missing-field-initializers '
-                        '-Wno-cast-function-type '
                         '-Werror=implicit-function-declaration -fprofile-use '
-                        '-fprofile-correction -I. -I./Include -fPIC '
-                        "'-Wl,-rpath,$ORIGIN:$ORIGIN/../lib' -fPIC",
+                        '-fprofile-correction -IObjects -IInclude -IPython -I. '
+                        '-I../Include '
+                        '-I/home/chan/Downloads/libffi-3.4.2/install/include/ '
+                        '-fPIC',
  'PY_WARN_ON_C_LOCALE': 1,
  'Py_DEBUG': 0,
  'Py_ENABLE_SHARED': 1,
@@ -636,8 +644,8 @@ build_time_vars = {'ABIFLAGS': 'm',
  'READELF': 'readelf',
  'RESSRCDIR': 'Mac/Resources/framework',
  'RETSIGTYPE': 'void',
- 'RUNSHARED': 'LD_LIBRARY_PATH=/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0',
- 'SCRIPTDIR': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/lib',
+ 'RUNSHARED': 'LD_LIBRARY_PATH=/home/chan/Downloads/Python-3.7.0/build:/opt/gcc-7.5.0/lib:/opt/gcc-7.5.0/lib64',
+ 'SCRIPTDIR': '/home/chan/Downloads/Python-3.7.0/install/lib',
  'SETPGRP_HAVE_ARG': 0,
  'SGI_ABI': '@SGI_ABI@',
  'SHELL': '/bin/sh',
@@ -665,7 +673,7 @@ build_time_vars = {'ABIFLAGS': 'm',
  'SIZEOF__BOOL': 1,
  'SOABI': 'cpython-37m-x86_64-linux-gnu',
  'SRCDIRS': 'Parser Objects Python Modules Programs',
- 'SRC_GDB_HOOKS': './Tools/gdb/libpython.py',
+ 'SRC_GDB_HOOKS': '../Tools/gdb/libpython.py',
  'STDC_HEADERS': 1,
  'STRICT_SYSV_CURSES': "/* Don't use ncurses extensions */",
  'STRIPFLAG': '-s',
@@ -678,20 +686,21 @@ build_time_vars = {'ABIFLAGS': 'm',
  'TCLTK_LIBS': '',
  'TESTOPTS': '',
  'TESTPATH': '',
- 'TESTPYTHON': 'LD_LIBRARY_PATH=/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0 '
+ 'TESTPYTHON': 'LD_LIBRARY_PATH=/home/chan/Downloads/Python-3.7.0/build:/opt/gcc-7.5.0/lib:/opt/gcc-7.5.0/lib64 '
                './python',
  'TESTPYTHONOPTS': '',
- 'TESTRUNNER': 'LD_LIBRARY_PATH=/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0 '
-               './python ./Tools/scripts/run_tests.py',
+ 'TESTRUNNER': 'LD_LIBRARY_PATH=/home/chan/Downloads/Python-3.7.0/build:/opt/gcc-7.5.0/lib:/opt/gcc-7.5.0/lib64 '
+               './python ../Tools/scripts/run_tests.py',
  'TESTTIMEOUT': 1200,
  'TIMEMODULE_LIB': 0,
  'TIME_WITH_SYS_TIME': 1,
  'TM_IN_SYS_TIME': 0,
  'UNICODE_DEPS': '\\',
  'UNIVERSALSDK': '',
- 'UPDATE_FILE': 'python ./Tools/scripts/update_file.py',
+ 'UPDATE_FILE': 'python ../Tools/scripts/update_file.py',
  'USE_COMPUTED_GOTOS': 0,
  'VERSION': '3.7',
+ 'VPATH': '..',
  'WINDOW_HAS_FLAGS': 0,
  'WITH_DOC_STRINGS': 1,
  'WITH_DTRACE': 0,
@@ -702,9 +711,9 @@ build_time_vars = {'ABIFLAGS': 'm',
  'WITH_VALGRIND': 0,
  'X87_DOUBLE_ROUNDING': 0,
  'XMLLIBSUBDIRS': 'xml xml/dom xml/etree xml/parsers xml/sax',
- 'abs_builddir': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0',
- 'abs_srcdir': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0',
- 'datarootdir': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install/share',
- 'exec_prefix': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install',
- 'prefix': '/home/chan/temp/FastCAELinuxExtlibSource/Python-3.7.0/install',
- 'srcdir': '.'}
+ 'abs_builddir': '/home/chan/Downloads/Python-3.7.0/build',
+ 'abs_srcdir': '/home/chan/Downloads/Python-3.7.0/build/..',
+ 'datarootdir': '/home/chan/Downloads/Python-3.7.0/install/share',
+ 'exec_prefix': '/home/chan/Downloads/Python-3.7.0/install',
+ 'prefix': '/home/chan/Downloads/Python-3.7.0/install',
+ 'srcdir': '..'}
